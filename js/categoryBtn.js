@@ -11,10 +11,11 @@ const displayCategories = (categories) => {
     categories.forEach(element => {
         // console.log(element);
 
-        const categoryBtn = document.createElement(`button`);
-        categoryBtn.classList= `btn`;
-        categoryBtn.innerText = element.category;
-        btnContainer.appendChild(categoryBtn)
+        const categoryBtnDiv = document.createElement(`div`);
+        categoryBtnDiv.innerHTML = `
+        <button onclick="loadCategoryVideo(${element.category_id})" class="btn inline-block">${element.category}</button>
+        `;
+        btnContainer.appendChild(categoryBtnDiv)
     });
 }
 

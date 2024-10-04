@@ -6,13 +6,10 @@ const loadVideos = () => {
         .catch(err => console.error(`An error found`, err))
 };
 
-// time converter
-
-
 const displayVideos = (videos) => {
-    const videoContainer = document.getElementById(`videos`)
+    const videoContainer = document.getElementById(`videos`);
+    videoContainer.innerHTML = ``;
     videos.forEach(video => {
-        console.log(video);
         const videoCard = document.createElement(`div`);
         videoCard.classList = `card card-compact`
         videoCard.innerHTML = `
@@ -20,7 +17,7 @@ const displayVideos = (videos) => {
          <img class = "w-full h-full object-cover"
              src=${video.thumbnail}
              alt="Shoes" />
-           ${video.others.posted_date?.length === 0 ? `` : `  <span class="absolute right-2 bottom-2 bg-black text-white rounded p-3">${getTime(video.others.posted_date)}</span>`}
+           ${video.others.posted_date?.length === 0 ? `` : `  <span class="absolute right-2 bottom-2 bg-black text-white rounded p-3 text-xs">${getTime(video.others.posted_date)}</span>`}
     </figure>
   <div class="px-0 py-2 flex gap-2">
        <div>
