@@ -9,12 +9,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- css links -->
-     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>PH Tube</title>
 </head>
 
 <body>
+    <!-- header section start -->
+    <header>
+        <nav class="border-b-2 container mx-auto py-2">
+            <div class="navbar bg-base-100 flex justify-between ">
+                <div class="w-32">
+                   <img src="./assets/Logo.png" alt="">
+                </div>
+                <div class=" gap-2">
+                    <div class="form-control">
+                        <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                    </div>
+                </div>
+                <div class="">
+                    <button class="btn btn-error px-8 text-base font-semibold">Sort</button>
+                   </div>
+            </div>
+        </nav>
+        <div id="categoryBtnContainer" class="text-center mt-3 space-x-3"></div>
+    </header>
+    <!-- header section end -->
 
+    <!-- js links -->
+     <script src="./js/video.js"></script>
 </body>
 
 </html>
